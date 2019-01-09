@@ -1,5 +1,10 @@
 @import 'reset.css';
 
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .dFlex{ display: flex;}
 .justifyCC{ justify-content: center;}
 .justifySB{ justify-content: space-between;}
@@ -64,6 +69,9 @@
     -webkit-background-clip: text;
 }
 
+.maxw50{
+    max-width: 50%;
+}
 
 .ff0{ font-family: Poppins;}
 .ff1{ font-family: Countryside;}
@@ -94,6 +102,12 @@
 .padB10{padding-bottom: 10px;}
 .pRS{padding: 3px;}
 .padl{padding-left: 2.5%;}
+.pr20{
+    padding-right:20px;
+}
+.padding-btn{
+    padding: 15px 20px 15px 20px;
+}
 .mar{margin: 5px;}
 
 .bRG{border-radius:25px 0% 0% 25px;} 
@@ -120,6 +134,26 @@
     margin-left: -20px;
     }
 
+    .l-h50{
+        line-height: 50px;
+    }
+button{
+    background-color: #900c3f;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family: Poppins;
+    -webkit-transition-duration: 0.4s;
+}
+
+button:hover{
+    background-color: #6b082e;
+    
+}
     select:focus {
         outline:none;
     }

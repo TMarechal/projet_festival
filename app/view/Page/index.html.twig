@@ -19,7 +19,7 @@
             <p class="ff0 fs22 color0 light">EN BOURGOGNE FRANCHE-COMTÉ</p>
         </div>
         <div class="dFlex h100px vaB justifyCC alignCC flexDR alignIC"> 
-            <form class="h45px bgHeader br m30" method="POST" action="">
+            <form class="h45px bgHeader br m30" method="POST" action="#alaffiche">
                 <select name="name" id="" class="bRG h45px bnone bgHeader w175px color7 txtlc ">
                     <option value="">Nom du festival</option>
                     {% for info in infosFormSearch %}
@@ -49,7 +49,7 @@
     <section class=" bgSection dFlex justifyCC alignIC flexDR">
         <div class="dFlex w100vw">
             <div class="dFlex flexDC bgHeader w60 pad30">
-                <h1 class="ff1 color4 fs42 regular padB">A l'affiche</h1>
+                <h1 id="alaffiche" class="ff1 color4 fs42 regular padB">A l'affiche</h1>
                 {% for festival in festivals %}
                     <div class="dFlex bbFest">
                         <img src="assets/images/photos/{{ festival.image }}" class="marImg" width="100px" height="100px">
