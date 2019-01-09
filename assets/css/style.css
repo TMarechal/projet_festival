@@ -195,3 +195,13 @@ line-height: 20px;}
     font-weight: normal;
     font-style: normal;
 }
+
+button {color:#3d3d3b;background:transparent;border-width:2px;border-style: solid;border-color: #581845;position:relative;margin:1em;display:inline-block;padding:0.5em 1em;transition:all 0.3s ease-in-out;text-align:center;
+    font-family:comfortaa;font-weight:bold}
+    button:before, button:after {content:'';display:block;position:absolute;border-color:#581845;box-sizing:border-box;border-style:solid;width:1em;height:1em;transition:all 0.3s ease-in-out}
+    button:before {top:-6px;left:-6px;border-width:2px 0 0 2px;z-index:5;}
+    button:after {bottom:-6px;right:-6px;border-width:0 2px 2px 0;}
+    button:hover:before, button:hover:after {width:calc(100% + 12px);
+      height:calc(100% + 12px);border-color:#581845}
+    button:hover {color:#fff;background-color:#581845;border-color:#581845}
+    .panel {max-width:100%;text-align:center;}

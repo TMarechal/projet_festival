@@ -57,6 +57,9 @@
                             <p class="ff0 xbold color2 fs22 padB10">{{ festival.nom_manifestation }}</p>
                             <p class="ff0 xbold color8 fs14 padB10">{{ festival.Date_debut}} - {{ festival.date_fin}} </p>
                             <p class="ff0 light color1 fs14">{{ festival.commune }} - {{ festival.departement }}</p>
+                            <div class="dFlex">
+                                <a href="festival/{{ festival.id }}"><button class="ff0">En savoir plus</button></a>
+                            </div>
                         </article>
                     </div>
                 {% endfor %}
@@ -82,6 +85,11 @@
             }
         });
         
+        var myIcon = L.icon({
+            iconUrl: 'assets/images/marker-icon.svg',
+            iconSize: [25,41],
+        });
+
         {% for festival in festivals %}
             var popup = "<div>" +
                             "<h4>{{ festival.nom_manifestation }}</h4>" +
@@ -89,7 +97,9 @@
                             "<h6>{{ festival.commune }}</p>" +
                             "<a href='festival/{{ festival.id }}'>Voir le festival</a>" +
                         "</div>";
-            var marker = L.marker([{{ festival.coordonnees_gps }}]).bindPopup(popup)
+            var marker = L.marker([{{ festival.coordonnees_gps }}], {
+                icon: myIcon
+            }).bindPopup(popup)
 
             groupMarkers.addLayer(marker);
         {% endfor %}
