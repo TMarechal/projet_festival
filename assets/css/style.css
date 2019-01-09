@@ -26,6 +26,8 @@
 .h60vh{height: 60vh;}
 .h175px{ height: 175px;}
 .h100{ height: 100%;}
+.h80{ height: 80%;}
+
 
 .w175px{width: 175px;}
 .w50px{width: 50px;}
@@ -39,6 +41,7 @@
 .w60vw{width: 60vw;}
 .w66{width: 66%;}
 .w70vw{width: 70vw;}
+.w80{ width: 80%;}
 .w100vw{width: 100vw;}
 
 .color0{ color:#fff;}

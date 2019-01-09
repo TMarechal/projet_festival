@@ -21,6 +21,7 @@ class Kernel {
         // Analyser la requête
         $request = isset($_GET['request']) ? $_GET['request'] : '';
         $route = Router::analyse($request);
+      
 
         // Instancier le contrôleur et executer l'action
         $class = $route['controller']."Controller";

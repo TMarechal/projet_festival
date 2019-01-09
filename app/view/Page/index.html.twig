@@ -19,17 +19,26 @@
             <p class="ff0 fs22 color0 light">EN BOURGOGNE FRANCHE-COMTÉ</p>
         </div>
         <div class="dFlex h100px vaB justifyCC alignCC flexDR alignIC"> 
-            <form class="h45px bgHeader br m30">
-                <select name="Nom" id="" class="bRG h45px bnone bgHeader w175px color7 txtlc ">
+            <form class="h45px bgHeader br m30" method="POST" action="">
+                <select name="name" id="" class="bRG h45px bnone bgHeader w175px color7 txtlc ">
                     <option value="">Nom du festival</option>
+                    {% for info in infosFormSearch %}
+                        <option value="{{ info.nom_manifestation }}">{{ info.nom_manifestation }}</option>
+                    {% endfor %}
                 </select>
-                <select name="Type" id="" class="h45px bnone bgHeader w175px color7 txtlc ">
+                <select name="type" id="" class="h45px bnone bgHeader w175px color7 txtlc ">
                     <option value="">Type</option>
+                        {% for type in types %}
+                            <option value="{{ type.id }}">{{ type.domaine }}</option>
+                        {% endfor %}
                 </select>
-                <select name="Date" id="" class="h45px bnone bgHeader w175px color7 txtlc">
+                <select name="date" id="" class="h45px bnone bgHeader w175px color7 txtlc">
                     <option value="">Date</option>
+                        {% for month in months %}
+                            <option value="{{ loop.index }}">{{ month }}</option>
+                        {% endfor %}
                 </select>
-                <input type="submit" value=">" class="bgSub bRD color0 h45px bnone w50px">
+                <input type="submit" name="searchFestival" value=">" class="bgSub bRD color0 h45px bnone w50px">
             </form>
         </div>
     </nav>

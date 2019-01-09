@@ -1,0 +1,52 @@
+{% extends 'Layout/layout.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - Description
+{% endblock %}
+
+{% block nav%}
+<header>
+    <div class="h175px bgHeader2 dFlex flexDR justifySA alignIC">
+        <a href="index.php" class=""><img src="assets/images/logo.svg" width="150px" height="150px"></a>
+    <nav class="color0 dFlex flexDR">
+          
+            <ul class="dFlex flexDR alignIC justifySB w250px">
+                <li class="fs16 bold ff0 pad ">Festivals</li>
+                <li class="fs16 bold ff0 pad ">Contact</li>
+            </ul>
+           
+    </nav>
+    </div>    
+</header>
+
+{% endblock %}
+
+{% block content %}
+    <section class="h100vh bgSection dFlex justifyCC alignIC">
+        <div class="h60vh w60vw dFlex flexDR">
+            <div class="bgC w33 h100">
+                <img src="assets/images/concert-768722_1920.jpg" class="h100">
+
+            </div>
+                <div class="bgHeader w66 h100  dFlex justifyCC alignIC">
+                    <div class="dFlex h80 w80 justifySB flexDC">
+                        <div class="">
+                            
+                            <p class="bold fs18 padB"><img class="h15px w15px " src="assets/images/calendar.png">{{ infosFest.Date_debut }} - {{ infosFest.date_fin }} <span>{{ infosFest.commune }}  - {{ infosFest.departement }}</span></p>
+                            <h3 class="color2 fs48 bold ff0 padB">{{ infosFest.nom_manifestation }}</h3>
+                            <p class="fs14">You wanna know how I got these scars? My father was... a drinker, and a fiend. And one night, he goes off crazier than usual. Mommy gets the kitchen knife to defend herself. He doesn't like that, not one bit. So, me watching he takes the knife to her, laughing while he does it. He turns to me and he says: "Why so serious?". He comes at me with the knife "Why so serious?". He sticks the blade in my mouth. "Let's put a smile on that face." and... Why so serious?</p>
+
+                        </div>
+                        <div class="dFlex justifySB">   
+                            <button href="#" name="site" label="" class="color0 bnone bgC h30px">Voir le site ></button>
+                            <div>
+                                <img class="h35px w35px" src="assets/images/facebook.png">
+                                <img class="h35px w35px" src="assets/images/twitter.png">
+                                <img class="h35px w35px"src="assets/images/instagram-icon.png">
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+        </div>
+    </section>
+{% endblock %}

@@ -15,6 +15,11 @@ class Router {
         } else {
             $parts = explode('/', $request);
 
+            if($parts[0] == "festival" && count($parts) == 2){
+                $result["controller"] = "Page";
+                $result["action"] = "infosFestival";
+                $result["params"]["id_festival"] = $parts[1];
+            }
             //if($parts[0] == 'login' && (count($parts) == 1 || $parts[1] == '')){ // Route vers la page de connexion
             //    $result['controller']       = 'User';
             //    $result['action']           = 'login';
