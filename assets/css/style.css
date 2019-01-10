@@ -5,6 +5,8 @@ a {
     color: #fff;
 }
 
+.pRel{ position: relative;}
+
 .dFlex{ display: flex;}
 .justifyCC{ justify-content: center;}
 .justifySB{ justify-content: space-between;}
@@ -25,18 +27,24 @@ a {
 .h75px{height: 75px;}
 .h100px{height: 100px;}
 .h250px{height: 250px;}
+.h300px{ height: 300px;}
 .h750px{height: 750px;}
 .h80vh{height: 80vh;}
 .h100vh{height: 100vh;}
 .h60vh{height: 60vh;}
+.h20vh{ height: 20vh;}
 .h175px{ height: 175px;}
 .h100{ height: 100%;}
 .h80{ height: 80%;}
+.h20{ height: 20%;}
+.h404{ height: 60vh;}
 
 
 .w175px{width: 175px;}
+.w250px{width: 250px;}
 .w50px{width: 50px;}
 .w1000{width: 1000px;}
+.w25{width:25%;}
 .w33{width: 33%}
 .w333{width: 333px;}
 .w35px{ width: 35px;}
@@ -46,7 +54,11 @@ a {
 .w60vw{width: 60vw;}
 .w66{width: 66%;}
 .w70vw{width: 70vw;}
+.w75{width: 75%;}
 .w80{ width: 80%;}
+.w95{ width: 95%;}
+.w100{width: 100%;}
+.w100vh{width: 100vh;}
 .w100vw{width: 100vw;}
 
 .color0{ color:#fff;}
@@ -90,6 +102,7 @@ a {
 .fs42{ font-size: 42px;}
 .fs48{ font-size: 48px;}
 .fs78{ font-size: 78px;}
+.fs500{ font-size: 500px;}
 
 .m30{margin: 0 30px 0 30px;}
 .vaB{vertical-align: baseline;}
@@ -97,11 +110,14 @@ a {
 .marImg{ margin: 20px 20px 20px 0px;}
 .pad{padding: 27px;}
 .pad30{ padding:50px;}
+.pad30b{ padding:50px 0px 50px 50px;}
+.mar50{ margin: 25px 50px 25px 50px;}
 .padB20{ padding-bottom: 20px;}
 .padB{padding-bottom: 15px;}
 .padB10{padding-bottom: 10px;}
 .pRS{padding: 3px;}
 .padl{padding-left: 2.5%;}
+.padL67px{ padding-left: 67px;}
 .pr20{
     padding-right:20px;
 }
@@ -205,3 +221,49 @@ button {color:#3d3d3b;background:transparent;border-width:2px;border-style: soli
       height:calc(100% + 12px);border-color:#581845}
     button:hover {color:#fff;background-color:#581845;border-color:#581845}
     .panel {max-width:100%;text-align:center;}
+
+.transition{ transition: all 0.5s ease-in-out;}
+
+.readMore{ position: absolute;
+            right:0;
+            bottom: 0;}
+
+.extendMap{width: 75%;
+    transition: all 0.5s ease-in-out;}
+.extendAffiche{ width:25%;}
+
+    /* 404 */
+
+
+
+.overFH{overflow: hidden;}
+.bg404{
+    background-image:url("../images/mosaique1.png");
+    background-repeat: repeat;
+    width: 4000px;
+    animation: defil 10s linear infinite;
+}
+
+.vinyl{animation: vinyl 1.25s linear infinite;}
+
+@keyframes defil {
+    0% {transform: translateX(0px);}
+    100%{transform: translateX(-1400px);}
+}
+@keyframes vinyl {
+    0% {transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+.posabs{position: absolute;}
+
+
+
+.maxw50{
+    max-width: 50%;
+}
+
+.boxS {box-shadow: 0px 0px 20px grey;}
+
+li:hover{box-shadow: 0px 0px 20px white;
+    border-radius: 25px;
+    transition: 0.3s;}
