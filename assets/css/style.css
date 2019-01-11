@@ -7,6 +7,7 @@ a {
 
 .pRel{ position: relative;}
 
+.dNone{display: none;}
 .dFlex{ display: flex;}
 .justifyCC{ justify-content: center;}
 .justifySB{ justify-content: space-between;}
@@ -266,8 +267,16 @@ button {color:#3d3d3b;background:transparent;border-width:2px;border-style: soli
     max-width: 50%;
 }
 
-.boxS {box-shadow: 0px 0px 20px grey;}
+.boxS {box-shadow: 0px 0px 20px rgba(128, 128, 128, 0.781);}
 
 li:hover{box-shadow: 0px 0px 20px white;
     border-radius: 25px;
     transition: 0.3s;}
+
+
+    .LTCalc{ top: Calc(50% - 139px); left: Calc(50% - 249px);}
+.karim{
+    z-index: 2;
+    top:0;
+    right: 0;
+}

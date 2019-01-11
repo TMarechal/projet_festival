@@ -23,7 +23,7 @@
 
 {% block content %}
     <section class="h100vh bgSection dFlex justifyCC alignIC">
-        <div class="h60vh w60vw dFlex flexDR">
+        <div class="h60vh w60vw dFlex flexDR boxS">
             
                 <img src="assets/images/photos/{{ infosFest.image }}" class="h100 bgC h100 maxw50">
 
@@ -35,7 +35,10 @@
                             
                             <h3 class="color2 fs42 bold ff0 padB l-h50">{{ infosFest.nom_manifestation }}</h3>
                             <p class="ff0 xbold color8 fs20 padB10"><i class="fas fa-calendar-alt ff0 xbold color8 fs22 padB10 pr20"></i>{{ infosFest.Date_debut }} - {{ infosFest.date_fin }} </p>
-                            <p class="ff0 light color1 fs14">{{ infosFest.commune }}  - {{ infosFest.departement }}</p>
+                            <p class="ff0 light color8 fs14 padB20">{{ infosFest.commune }}  - {{ infosFest.departement }}</p>
+                            <div id="demo-output" class="ff0 regular color1 fs18">
+                                <p></p>
+                            </div>
 
                         </div>
                         <div class="dFlex justifySB">   

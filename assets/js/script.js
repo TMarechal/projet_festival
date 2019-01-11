@@ -1,14 +1,31 @@
-var mymap = L.map('map').setView([46.52863469527167,2.43896484375], 6 );
+$('#demo-output').delorean({ type: 'paragraphs', amount: 2, character: '',perPara: 3, tag:  'p' });
 
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-maxZoom: 22,
-attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-id: 'mapbox.streets',
-}).addTo(mymap);
+/*$(document).ready(function(){
+    var codeTest = '';
+  
+    $(document).on('keydown', function(e){
+        if (e.keyCode == 75 && (codeTest == "")) {
+          codeTest += 'k';
+      } else if (e.keyCode == 65 && codeTest == "k") {
+          codeTest += 'a';
+      } else if (e.keyCode == 82 && codeTest == "ka") {
+          codeTest += 'r';}
+        else if (e.keyCode == 73 && codeTest == "kar") {
+            codeTest += 'i';}
+        else if (e.keyCode == 77 && codeTest == "kari") {
+            codeTest += 'm';
+            document.getElementById('smash').style.display = "block";
+            document.getElementById('smashA').play();
+            setTimeout(function(){
+            document.getElementById('smash').style.display = "none";
+            },2000);
+        } else {
+            codeTest = "";
+            document.getElementById('smash').style.display = "none";
+        }
+        console.log(codeTest);
+    });
+  
+  });
 
-$(document).on('click','.btnMap',function(){
-    var coords = ($(this).attr("data-coord")).split(',');
-    mymap.setView([coords[0], coords[1]], 11);
-});
+  
