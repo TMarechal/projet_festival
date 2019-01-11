@@ -7,3 +7,8 @@ attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStree
 'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 id: 'mapbox.streets',
 }).addTo(mymap);
+
+$(document).on('click','.btnMap',function(){
+    var coords = ($(this).attr("data-coord")).split(',');
+    mymap.setView([coords[0], coords[1]], 11);
+});

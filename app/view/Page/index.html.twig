@@ -51,7 +51,6 @@
             <div id="alaffiche" class="dFlex flexDC bgHeader w60 transition">
                 <div class="dFlex justifySB pad30b">
                     <h1 id="alaffiche" class="ff1 color4 fs42 regular padB">A l'affiche</h1>
-                    <button id="btnW" class=" test ff0" type="button"><</button>
                 </div>
                 {% for festival in festivals %}
                     <div class="pRel bbFest mar50 transition">
@@ -64,6 +63,7 @@
                     </div>
                         <div class="dFlex">
                                 <a href="festival/{{ festival.id }}"><button class="readMore ff0">En savoir plus</button></a>
+                                <button  data-coord="{{ festival.coordonnees_gps }}" class="btnMap ff0">Voir sur la carte</button>
                         </div>
                         </article>
                     </div>
@@ -80,6 +80,7 @@
     {{ parent() }}
 
     <script>
+
         var groupMarkers = L.markerClusterGroup({
             iconCreateFunction: function(cluster) {
                 return L.divIcon({ 
