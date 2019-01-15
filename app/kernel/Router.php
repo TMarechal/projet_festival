@@ -12,7 +12,11 @@ class Router {
         if($request === '' || $request === '/'){ // Route vers la page d'accueil
             $result['controller']   = 'Page';
             $result['action']       = 'index';
-        } else {
+        } elseif($request === 'error404'){
+            //;
+        }
+        
+        else {
             $parts = explode('/', $request);
 
             if($parts[0] == "festival" && count($parts) == 2){

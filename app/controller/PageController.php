@@ -30,6 +30,10 @@ class PageController extends Controller {
         $id_festival = $this->route["params"]["id_festival"];
         $infosFest = Festival::getFestivalById($id_festival);
 
+        if(!$infosFest){
+            header('Location :/error404', 404);
+        }
+
         $template = $this->twig->loadTemplate('/Page/festival.html.twig');
         echo $template->render(array(
             "infosFest"         => $infosFest,
